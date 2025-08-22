@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Your Portfolio</h1>
+    <div class="portfolio">
+        <img src="{{ url_for('static', filename='../uploads/' + pic) }}" alt="Profile Picture">
+        <h2>{{ name }}</h2>
+        <p>Email: {{ email }}</p>
+        {% if linkedin %}<p><a href="{{ linkedin }}" target="_blank">LinkedIn</a></p>{% endif %}
+        {% if instagram %}<p><a href="{{ instagram }}" target="_blank">Instagram</a></p>{% endif %}
+        {% if leetcode %}<p><a href="{{ leetcode }}" target="_blank">LeetCode</a></p>{% endif %}
+        <h3>About Me</h3>
+        <p>{{ about }}</p>
+    </div>
+</body>
+</html>
+
+
